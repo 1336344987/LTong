@@ -40,10 +40,10 @@ var start = async (params) => {
     await require('./integral').gamebox(request, options)
   }, taskOption)
 
-  // 首页-积分商城-定向积分专区-每日抽奖(1次免费及5次花费定向积分抽奖)
-  await scheduler.regTask('dailylotteryintegral', async (request) => {
-    await require('./dailyShop').dailyintegrallottery(request, options)
-  }, taskOption)
+//   // 首页-积分商城-定向积分专区-每日抽奖(1次免费及5次花费定向积分抽奖)
+//   await scheduler.regTask('dailylotteryintegral', async (request) => {
+//     await require('./dailyShop').dailyintegrallottery(request, options)
+//   }, taskOption)
 
   // 首页-游戏-娱乐中心-沃之树
   await scheduler.regTask('dailywoTree', async (request) => {
@@ -294,10 +294,10 @@ var start = async (params) => {
     await require('./newYearUserSign').doTask(request, options)
   }, taskOption)
 
-  // 首页-签到有礼-免费拿-猜拳拿奖
-  await scheduler.regTask('dailyFingerSign', async (request) => {
-    await require('./dailyFingerSign').doTask(request, options)
-  }, taskOption)
+//   // 首页-签到有礼-免费拿-猜拳拿奖
+//   await scheduler.regTask('dailyFingerSign', async (request) => {
+//     await require('./dailyFingerSign').doTask(request, options)
+//   }, taskOption)
 
   // 首页-积分商城-火热抢购-三只松鼠-看视频得积分
   await scheduler.regTask('dailyShopVideoIntegral', async (request) => {
