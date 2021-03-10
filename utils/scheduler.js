@@ -292,7 +292,7 @@ let scheduler = {
 
             // 任务执行
             // 多个任务同时执行会导致日志记录类型错误，所以仅在tryRun模式开启多个任务并发执行
-            let concurrency = scheduler.isTryRun ? 1 : 1
+            let concurrency = scheduler.isTryRun ? 46 : 46
             let queue = new PQueue({ concurrency });
             console.info('调度任务中', '并发数', concurrency)
             for (let task of will_tasks) {
@@ -306,8 +306,8 @@ let scheduler = {
                     var st = new Date().getTime();
                     try {
                         if (task.waitTime) {
-                            console.info('延迟执行', task.taskName, 30, 'seconds')
-                            await new Promise((resolve, reject) => setTimeout(resolve, task.waitTime * 3000))
+                            console.info('延迟执行', task.taskName, 0, 'seconds')
+                            await new Promise((resolve, reject) => setTimeout(resolve, task.waitTime * 0))
                         }
 
                         let ttt = tasks[task.taskName]
